@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_pay/utils/color.dart';
 import 'package:google_pay/utils/imageconstant.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_pay/utils/color.dart';
 import 'package:google_pay/utils/imageconstant.dart';
+import 'package:google_pay/view/profile_screen/profile_screen.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({
@@ -26,8 +27,17 @@ class HeaderWidget extends StatelessWidget {
             fit: BoxFit.cover,
             scale: 10,
           ),
-          const CircleAvatar(
-            backgroundImage: AssetImage(ImageConstant.j),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileScreen(),
+                  ));
+            },
+            child: const CircleAvatar(
+              backgroundImage: AssetImage(ImageConstant.j),
+            ),
           )
         ],
       ),
